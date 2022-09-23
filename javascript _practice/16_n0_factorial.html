@@ -1,0 +1,26 @@
+<script>
+    //1! = 1
+    //2! 1! * 2
+    //n! = (n - 1)! * n
+    //재귀호출
+    function recursive(n) {
+    if (n == 1){
+        return 1;
+    }
+    return recursive(n - 1) * n;
+}
+    
+    
+    function factorial (n) {
+        var factorial = 1;
+
+        for(var i = 1; i <=n; i++){
+            factorial *= i;
+        
+        }
+        return factorial;
+    }
+    alert(factorial(10));
+    alert(recursive(10));
+
+</script>
