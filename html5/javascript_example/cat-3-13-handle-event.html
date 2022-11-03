@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="app">
+      <h1>{{ message.value }}</h1>
+      <p>{{ message.value }}</p>
+      <p>{{ message.value.length }}</p>
+      <p>{{ list[2] }}</p>
+      <p>{{ list[num] }}</p>
+    </div>
+    <script src="http://cdn.jsdelivr.net/npm/vue@2.6.10"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        methods: {
+            handleClick: function() {
+                alert('클릭했어요!')
+            }
+        }
+      });
+    </script>
+  </body>
+</html>

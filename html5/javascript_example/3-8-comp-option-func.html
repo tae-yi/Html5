@@ -1,0 +1,16 @@
+<!-- p.56 vue1st/3-9-comp-opt-func.html -->
+<div id="app">
+    <comp />
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10"></script>
+<script>
+    Vue.component('comp', {
+        render(h) {
+            return h("span", "안녕하세요. Vue 입니다.");
+        }
+    });
+    // 루트 컴포넌트(Vue 인스턴스)
+    new Vue({
+        el:"#app",
+    });
+</script>
