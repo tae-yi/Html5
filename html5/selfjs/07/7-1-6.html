@@ -1,0 +1,19 @@
+<!-- selfjs/07/7-1-6.html -->
+<script>
+     document.addEventListener('DOMContentLoaded', () => {
+     const rects = document.querySelectorAll('.rect');
+     rects.forEach((rect, index) => {
+     const width = (index + 1) * 100;
+     const src = `http://placekitten.com/${width}/250`;
+     // 특정 속성에 값을 지정합니다.
+     rect.setAttribute('src', src);
+        });
+     });
+    </script>
+    <body>
+     <img class="rect" />
+     <img class="rect" />
+     <img class="rect" />
+     <img class="rect" />
+    </body>
+    
