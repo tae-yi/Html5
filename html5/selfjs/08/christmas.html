@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8" />
+        <meta name = "viewport" contnet = "width=device-width, initial-scale=1.0">
+        <title> 안녕 2022년 </title>
+    </head>
+<style>
+   body {
+    background-color: #0a0a4b;
+   }
+  .envelope {
+     width: 200px;
+     height: 200px;
+     background-image: url('https://pngimg.com/uploads/santa_sleigh/santa_sleigh_PNG6.png');
+     background-size: cover;
+     /* background-position: center; */
+     margin: 200px auto 0px auto;
+     cursor: pointer;
+     
+    }
+   .envelope-msg {
+                color: white;
+                text-align: center;
+     }
+    .rtan {
+        background-color: white;
+
+        width: 200px;
+        height: 200px;
+
+        background-image: url("https://media.tenor.com/ZKHqBuEwXVIAAAAd/ho-ho-ho-santa-claus.gif");
+        background-size: cover;
+        background-position: center;
+        border-radius: 100px;
+
+        margin: 100px auto 0px auto;
+        border: 5px solid white;
+        box-shadow: 0px 0px 10px 0px white;
+    }
+    h1 {
+        color: white;
+        text-align: center;
+        margin: 30px;
+    }
+    .messagebox {
+        background-color: white;
+        width: 400px;
+        margin: auto;
+        color: brown;
+        padding: 30px;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+        box-shadow: 0px 0px 10px 0px white;
+    }
+    .from {
+        text-align: right;
+        margin-bottom: 0px;
+    }
+    .letter-open {
+        display: none;
+    }
+    @media screen and (max-width: 760px) {   /* 반응형 레이아웃 */
+        .messagebox {
+            width: 300px;
+            padding: 20px;
+        }
+        .rtan {
+            width: 150px;
+            height: 150px;
+            margin: 70px auto 0px auto;
+        }
+        .envelope {
+            margin: 150px auto 0px auto;
+        }
+    }
+</style>
+<body>
+    <div class = "letter-close">
+        <div class = "envelope"></div>  
+        <h2 class = "envelope-msg">이랴 이랴</h2>
+    </div> 
+    <div class = "letter-open">
+        <div class = "rtan" onclick="go_rtan()"></div>
+        <h1>2022년 수고 많았어!</h1>
+        <div class = "messagebox">
+            ♡ 새해 복 많이 받아 ♡<br>
+        </div>
+    </div>
+    <script src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/snow.js"></script>
+    <script>
+        const letterClose = document.querySelector(".letter-close");
+        const letterOpen = document.querySelector(".letter-open");
+        letterClose.onclick = () => {
+            letterClose.style.display = "none";
+            letterOpen.style.display = "block";
+        };
+        function go_rtan() {
+            alert('앗, 어떻게 찾았지!');
+            window.location.href = 'https://www.youtube.com/shorts/le0KSxZZlE0';
+        }
+    </script>
+</body>
