@@ -1,0 +1,31 @@
+<!-- selfjs/10/10-1-5.html -->
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script> <!--  기본 라이브러리 -->
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> <!-- 리액트 코드를 쉽게 작성할수 있게 해주는 라이브러리-->
+<div id="root"></div>
+<script type="text/babel">
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      time: new Date()
+    }
+  }
+
+  render() {
+    return <h1>{this.state.time.toLocaleTimeString()}</h1>
+  }
+  componentDidMount() {
+    // 컴포넌트가 화면에 출력되었을 때
+    this.timerId = setInterval(() => {
+      this.setState({
+        time: new Date()
+      })
+    }, 1000)
+  }
+
+  componentWillUnmount() {
+    // 컴포넌트가 화면에서 제거될 때
+    clearInterval(this.timerId)
+  }
+}
